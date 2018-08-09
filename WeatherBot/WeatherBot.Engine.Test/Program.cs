@@ -17,12 +17,12 @@ namespace WeatherBot.Engine.Test
 
             Console.WriteLine(resp);
         }
-
+        
         public static void TestLuis()
         {
             LuisClient client = new LuisClient();
 
-            string query = "周末天气好吗";
+            string query = "明天北京天气好吗？";
             LUInfo result = client.Query(query);
 
             Console.WriteLine(result.ToString());
@@ -65,7 +65,7 @@ namespace WeatherBot.Engine.Test
 
         public static void Main(string[] args)
         {
-            /*
+           
             En2EndTest("北京天气？");
             En2EndTest("明天有雾霾吗？");
             En2EndTest("后天适合洗车吗？");
@@ -92,10 +92,10 @@ namespace WeatherBot.Engine.Test
             En2EndTest("12月28日三亚下雨吗");
             En2EndTest("明天上午天气");
             En2EndTest("明早天气");
+           
+            /*
+            End2EndTestForFile("D:\\Github\\WeatherBot-master\\WeatherBot\\WeatherBot.Engine.Test\\files\\test1.txt", "D:\\Github\\WeatherBot-master\\WeatherBot\\WeatherBot.Engine.Test\\files\\output1.txt");
             */
-
-            End2EndTestForFile("D:\\Github\\WeatherBot\\WeatherBot\\WeatherBot.Engine.Test\\files\\test1.txt", "D:\\Github\\WeatherBot\\WeatherBot\\WeatherBot.Engine.Test\\files\\output1.txt");
-
             Console.WriteLine("Finished!");
         }
     }

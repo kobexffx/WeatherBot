@@ -1,0 +1,12 @@
+
+2018-08-09 15:07:40.707 [LU Service]: It took 6342.0265 MS to get answer.
+
+2018-08-09 15:07:41.485 [Seniverse Service]: It took 752.5219 MS to get answer.
+
+2018-08-09 15:07:41.594 [LU Service]: It took 101.7269 MS to get answer.
+
+2018-08-09 15:08:32.667 [LU Service]: It took 1452.2138 MS to get answer.
+
+2018-08-09 15:08:33.764 [Seniverse Service]: It took 1049.7121 MS to get answer.
+
+2018-08-09 15:08:34.013 [LU Service]: It took 243.8607 MS to get answer.

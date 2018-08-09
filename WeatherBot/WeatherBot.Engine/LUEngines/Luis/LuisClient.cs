@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using System.Configuration;
 using System.Web;
 using WeatherBot.Engine.Common;
@@ -12,7 +13,7 @@ namespace WeatherBot.Engine.LUEngine.Luis
         private readonly string DefaultSubscriptionKey = ConfigurationManager.AppSettings["LuisSubscription"];
 
         private readonly APIClient client = new APIClient();
-        private string rootURL = "https://api.projectoxford.ai/luis/v1/application";
+        private string rootURL = "https://eastasia.api.cognitive.microsoft.com/luis/v2.0/apps/";
 
         public LuisClient()
         {
@@ -33,7 +34,7 @@ namespace WeatherBot.Engine.LUEngine.Luis
         public LUInfo Query(string query)
         {
             string encodedQuestion = HttpUtility.UrlEncode(query, System.Text.Encoding.UTF8);
-            string url = rootURL + "?id=" + this.AppId + "&subscription-key=" + this.SubscriptionKey + "&q=" + encodedQuestion; 
+            string url = rootURL + this.AppId + "?subscription-key=" + this.SubscriptionKey + "&verbose=true&q=" + encodedQuestion; 
             var jsonString = client.Query(url);
             QueryResult result =  JsonConvert.DeserializeObject<QueryResult>(jsonString);
 

@@ -9,7 +9,7 @@ namespace WeatherBot.Engine.Utils
 {
     public class LogUtils
     {
-        private const string logfilename = "d:\\home\\site\\wwwroot\\bin\\wbservice_log.txt";
+        private const string logfilename = "D:\\Github\\WeatherBot-master\\WeatherBot\\WBServicelog\\wbservice_log.txt";
         public static void Log(string logMessage)
         {
             Log(logMessage, logfilename);
